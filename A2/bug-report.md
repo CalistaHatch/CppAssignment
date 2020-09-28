@@ -35,19 +35,18 @@ int main()
 ```
 
 2. **What bug does the original code have?** 
- error: 'case' statement not in switch statement
- Missing {} for the switch statement
+ The bug that this code has is error: 'case' statement not in switch statement.
+ I am missing the curly brackets {} for the switch statement.
 
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
-
+I forgot to encapsulate the switch statment with curly brackets which lead to this code failing and the program wouldnt run.
 
 4. **How to correct the bug?**
-
+TO correct this bug I will put { before case 1 and } after the last break in the switch statement.
 
 5. **The corresponding bug-free code or code snippet is:**
 
 ```
-bug-free code or code snippet goes here
 #include <iostream>
 using namespace std;
 int main()
@@ -79,7 +78,7 @@ int main()
 ```
 
 6. **What is the take-away message from this bug?**
-
+The takeaway message from this bug is that Without defining the parameters of the switch statement the compiler couldn't understand this code.
 ---
 
 # Bug 2
@@ -159,7 +158,7 @@ There is a ; (semicolon) after #include iostream.
 The misunderstanding of C++ concepts was that after every expression it is necesary to put ; a semicolon, but it does not need to be put after the #include iostream.
 
 4. **How to correct the bug?**
-To fix the bug I will remove the semi colon from after <iostream>
+To fix the bug I will remove the semi colon from after iostream
 
 5. **The corresponding bug-free code or code snippet is:**
 
