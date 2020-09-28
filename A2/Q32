@@ -5,9 +5,10 @@ using namespace std;
 
 int main(){
 
-  double USD  {};
-  double CAD {};
-  int selection {};
+ double USD  {};
+ double CAD {};
+ int selection {};
+  
   cout << "Please enter 1 for USD to CAD conversion or 2 for CAD to USD conversion" << endl;
   cin >> selection;
   
@@ -15,20 +16,20 @@ if (selection== 1){
     cout << "Enter amount of US dollars"<< endl;
     cin >> USD;
     cout << "USD amount converted to CAD is " << (USD * 1.32) << endl;
-  }
+    }
 
 else if (selection == 2){
   cout << "enter amount of Canadian dollars" <<endl;
   cin >> CAD;
   cout << "CAD amount converted to USD is " << (CAD / 1.32) << endl;
-  
   }
-  else {
+ 
+else {
   cout << "Please enter 1 for USD to CAD conversion or 2 for CAD to USD conversion" << endl;
   cin >> selection;
   }
- 
-  return 0;
+  
+return 0;
 }
   
   
