@@ -39,10 +39,10 @@ int main()
  I am missing the curly brackets {} for the switch statement.
 
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
-I forgot to encapsulate the switch statment with curly brackets which lead to this code failing and the program wouldnt run.
+I forgot to encapsulate the switch statement with curly brackets which lead to this code failing and the program wouldnt run.
 
 4. **How to correct the bug?**
-TO correct this bug I will put { before case 1 and } after the last break in the switch statement.
+To correct this bug I will put { before case 1 and } after the last break in the switch statement.
 
 5. **The corresponding bug-free code or code snippet is:**
 
@@ -78,7 +78,7 @@ int main()
 ```
 
 6. **What is the take-away message from this bug?**
-The takeaway message from this bug is that Without defining the parameters of the switch statement the compiler couldn't understand this code.
+The takeaway message from this bug is that without defining the parameters of the switch statement the compiler couldn't understand this code.
 ---
 
 # Bug 2
@@ -125,7 +125,7 @@ The bug that this code has is that it uses "int" for the USD and CAD variables w
 then the calculations for the conversion would be inaccurate.  
   
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
-The missunderstanding that assuming the user wouldn;t enter a decimal instead of a whole number is why the variable int instead of double or float was chosen.
+The missunderstanding was that assuming the user wouldn't enter a decimal instead of a whole number is why the variable int instead of double or float was chosen.
 
 4. **How to correct the bug?**
 To correct this bug the variable type of both USD and CAD will be changed to double instead of int.
