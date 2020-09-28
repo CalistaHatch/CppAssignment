@@ -115,23 +115,87 @@ bug-free code or code snippet goes here
 1. **The incorrect original code or code snippit that you wrote:**
 
 ```
-code with bugs or code snippet with bug goes here
+#include <iostream>;
+using namespace std;
+
+int main(){
+
+  double USD  {};
+  double CAD {};
+  int selection {};
+  cout << "Please enter 1 for USD to CAD conversion or 2 for CAD to USD conversion" << endl;
+  cin >> selection;
+  
+if (selection== 1){
+    cout << "Enter amount of US dollars"<< endl;
+    cin >> USD;
+    cout << "USD amount converted to CAD is " << (USD * 1.32) << endl;
+  }
+
+else if (selection == 2){
+  cout << "enter amount of Canadian dollars" <<endl;
+  cin >> CAD;
+  cout << "CAD amount converted to USD is " << (CAD / 1.32) << endl;
+  
+  }
+  else {
+  cout << "Please enter 1 for USD to CAD conversion or 2 for CAD to USD conversion" << endl;
+  cin >> selection;
+  }
+ 
+  return 0;
+}
+  
+  
+
 
 ```
 
 2. **What bug does the original code have?**
-
+The bug that is in this code is warning: extra tokens at end of #include directive.
+there is a ; (semicolon) after #include <iostream>.
   
-
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
+The misunderatanding of C++ concepts was that after every expression it is necesary to put ; a semicolon, but it does not need to be put after the #include
 
 4. **How to correct the bug?**
+To fix the bug I will remove the semi colon from after <iostream>
 
 5. **The corresponding bug-free code or code snippet is:**
 
 ```
-bug-free code or code snippet goes here
+#include <iostream>
+using namespace std;
+
+int main(){
+
+  double USD  {};
+  double CAD {};
+  int selection {};
+  cout << "Please enter 1 for USD to CAD conversion or 2 for CAD to USD conversion" << endl;
+  cin >> selection;
+  
+if (selection== 1){
+    cout << "Enter amount of US dollars"<< endl;
+    cin >> USD;
+    cout << "USD amount converted to CAD is " << (USD * 1.32) << endl;
+  }
+
+else if (selection == 2){
+  cout << "enter amount of Canadian dollars" <<endl;
+  cin >> CAD;
+  cout << "CAD amount converted to USD is " << (CAD / 1.32) << endl;
+  
+  }
+  else {
+  cout << "Please enter 1 for USD to CAD conversion or 2 for CAD to USD conversion" << endl;
+  cin >> selection;
+  }
+ 
+  return 0;
+}
 
 ```
 
 6. **What is the take-away message from this bug?**
+The take away message from this bug is that there are always exceptions to rules, and to be mindful of syntax errors.
