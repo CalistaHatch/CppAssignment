@@ -1,4 +1,4 @@
-Q31. Rewrite the following program. Use a switch statement instead of the if/else if statement.
+Q31. 
 
 #include <iostream>
 using namespace std;
