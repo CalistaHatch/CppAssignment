@@ -153,10 +153,10 @@ else if (selection == 2){
 
 2. **What bug does the original code have?**
 The bug that is in this code is warning: extra tokens at end of #include directive.
-there is a ; (semicolon) after #include <iostream>.
+There is a ; (semicolon) after #include iostream.
   
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
-The misunderatanding of C++ concepts was that after every expression it is necesary to put ; a semicolon, but it does not need to be put after the #include
+The misunderstanding of C++ concepts was that after every expression it is necesary to put ; a semicolon, but it does not need to be put after the #include iostream.
 
 4. **How to correct the bug?**
 To fix the bug I will remove the semi colon from after <iostream>
