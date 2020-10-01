@@ -1,0 +1,2 @@
+Q19. Modify the program from Q18 so that it also finds the average number of hours per day that a given student studies biology as well as programming. For each given student include two prompts, 
+one for each subject. Have the program print out which subject the student, on average, spent the most time on.
