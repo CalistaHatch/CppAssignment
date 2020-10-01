@@ -1,0 +1,14 @@
+Q20. Using C++ style string to write a program that reads a sentence as input and converts each word of the sentence following the rule below:
+
+For every word in the sentence, the first letter is relocated the end of the word.
+Then append the string “KPU” to the word.
+More requirements:
+
+All letters in the output should be uppercase.
+More assumptions:
+
+The input sentence contains no non-alphabetic letters
+Sample Run:
+
+Please enter the original sentence: i LOVE to program
+Translated: IKPU OVELKPU OTKPU ROGRAMPKPU
