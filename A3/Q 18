@@ -42,3 +42,30 @@ int main()
 
 	return 0;
 }
+Note that the inner loop of this program is always executed exactly three times—once for each day of the long weekend. Modify the code so that the inner loop iterates n times, where n is a positive integer input by the user. In other words, let the user decide how many days to consider just as they choose how many students to consider.
+
+Sample Run:
+
+This program will find the average number of hours a day that a student spent programming over a long weekend
+
+How many students are there?
+2
+Enter the number of days in the long weekend
+2
+
+Please enter the number of hours worked by student 1 on day 1
+4
+
+Please enter the number of hours worked by student 1 on day 2
+6
+
+The average number of hours per day spent programming by student 1 is 5
+
+
+Please enter the number of hours worked by student 2 on day 1
+9
+
+Please enter the number of hours worked by student 2 on day 2
+13
+
+The average number of hours per day spent programming by student 2 is 11
