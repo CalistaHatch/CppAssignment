@@ -48,7 +48,7 @@ int main()
 			Btotal = Btotal + numBHours;
 		}
 
-		Baverage = total / nb;
+		Baverage = Btotal / nb;
 
 		cout << endl;
 		cout << "The average number of hours per day spent programming by "
