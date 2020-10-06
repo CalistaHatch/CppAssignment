@@ -1,14 +1,26 @@
-Q20. Using C++ style string to write a program that reads a sentence as input and converts each word of the sentence following the rule below:
+\\Q20. 
+\\CALISTA HATCH
 
-For every word in the sentence, the first letter is relocated the end of the word.
-Then append the string “KPU” to the word.
-More requirements:
+#include <iostream>
 
-All letters in the output should be uppercase.
-More assumptions:
+using namespace std;
 
-The input sentence contains no non-alphabetic letters
-Sample Run:
-
-Please enter the original sentence: i LOVE to program
-Translated: IKPU OVELKPU OTKPU ROGRAMPKPU
+int main()
+{
+    string sentence, word = "", translated = "";                               
+    cout<<"Please enter the original sentence: ";                               
+    getline(cin, sentence);                                                   
+    for (unsigned int i=0; i<sentence.length(); i++) {                                     
+        if(sentence[i] == ' '){                                              
+            translated = translated + word.substr (1,string::npos)+ word[0] + "KPU ";   
+            word = "";                                                          
+        }
+        else{                                                                 
+            word = word + (char)toupper(sentence[i]);                          
+        }
+    }
+    translated = translated + word.substr (1,string::npos)+ word[0] + "KPU ";   
+    cout<<"\nTranslated: "<<translated;                                         
+    
+    return 0;
+}
