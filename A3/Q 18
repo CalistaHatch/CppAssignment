@@ -33,7 +33,7 @@ int main()
 			total = total + numHours;
 		}
 
-		average = total / 3;
+		average = total / n;
 
 		cout << endl;
 		cout << "The average number of hours per day spent programming by "
