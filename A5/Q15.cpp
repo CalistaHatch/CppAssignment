@@ -1,4 +1,5 @@
-Q15. Rewrite the function below so that so it uses pointers instead of reference variables, and then demonstrate the function in a complete program.
+//Q15
+//Calista Hatch
 
 #include <iostream>
 using namespace std;
