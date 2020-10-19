@@ -1,29 +1,26 @@
 //Q15
 //Calista Hatch
 
-#include <iostream>
+  
+#include<iostream>
 using namespace std;
 
-int doSomething(int *x, int *y)
-{
 
-int temp=*x;
-*x= *y * 5;
-*y = temp * 3;
-return *x+*y;
-}
-
+int doSomething(int *x,int *y);
 int main()
 {
-int y,x;
-cout << "Please enter a number" << endl;
-cin >> x;
-cout << "Please enter another number" << endl;
-cin >> y;
+        int x,y,z;
+        cout<<"Enter the values for x and y: ";
+        cin>>x>>y;
+        z = doSomething(&x,&y);
+        cout<<"The Answer is :"<< z ;
+        return 0;
+}
 
-
-doSomething(&x, &y);
-cout << (x + y) << " = x(" << x << ") + y(" << y << ")" << endl;
-system("Pause");
-return 0;
+        int doSomething(int *x,int *y) 
+{
+        int temp=*x;
+        temp=*y*5;
+        *y=temp*3;
+        return *x + *y;
 }
