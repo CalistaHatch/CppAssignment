@@ -1,4 +1,39 @@
-Q20. Write a class declaration named Cylinder with a private member variable named radius and height . Write set and get functions to access the radius and height variables, and a function named getVolume that returns the volume of the Cylinder. The volume is calculated as
+//Q20. 
+//Calista Hatch
 
-3.14159 * radius * radius * height
-Use test cases in main function to test your class.
+#include<iostream>
+
+using namespace std;
+
+
+    class cylinder // defining  a class
+    {
+    private:
+        double height, radius;
+    public:
+      void set_values (double, double);
+      double getvolume ()
+      { 
+          return 3.14 * radius * radius * height; // calculating volume of cylinder in class as we cannot access private function outside of class
+      
+      }
+  
+    };
+    
+    void cylinder:: set_values ( double r, double h) // accessing the private variables of class by public function
+    {
+        radius = r;
+        height = h;
+    }
+    
+  
+    int main(){
+    
+    cylinder cyl; // creating object of class
+    cyl.set_values (4.8, 6.7); // testing case
+    cout<< "The volume of the test cylinder is " <<cyl.getvolume();
+    cyl.set_values (5, 2.99);
+    cout<<"\nThe volume of another test cylinder is " <<cyl.getvolume();
+    return 0;
+ 
+}
