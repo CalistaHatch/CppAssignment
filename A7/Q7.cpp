@@ -1,14 +1,118 @@
-Q7. Design a class named Student . The class should keep the following information in
+//Q7
+#include <iostream>
+using namespace std;
+class Student
+ {
+  protected:
+   string studentName;
+   string studentNumber;
+ int age;
+  public:
+   Student(){}
+   Student(string name, string number, int age)
+ {
+  this -> studentName = name;
+  this -> studentNumber = number;
+  this -> age = age;
+ }
+ void setStudent(string name, string number, int age)
+ {
+  this -> studentName = name;
+  this -> studentNumber = number;
+  this -> age = age;
+ }
+ void printStudent()
+ {
+ cout<<"Student Name: "<<studentName<<endl;
+ cout<<"Student Number: "<<studentNumber<<endl;
+ cout<<"Student Age: "<<age<<endl;
+ } 
+ string getStudentName()
+ {
+  return studentName;}
 
-Student name (a String)
-Student number (a String)
-Student Age (an int)
-Write one or more constructors and the appropriate accessor and mutator functions for the class.
+ string getStudentNumber()
+ {
+  return studentNumber;}
+ int getStudentAge()
+ {
+  return age;}
+};
+ class KpuStudent : public Student
+{
+  protected:
+   string major;
+  string campus;
+ int year;
+  public:
+   KpuStudent():Student(){}
+   KpuStudent(string name, string number, int age, string m, string c,
+int year) : Student(name, number, age)
+ {
+  this -> major = m;
+  this -> campus = c;
+  this -> year = year;
+ }
+ void setKpuStudent(string name, string number, int age, string m,
+string c, int year)
+ {
+  this -> major = m;
+  this -> campus = c;
+  this -> year = year;
+   setStudent(name, number, age);
+ }
+ void PKpuStudent()	// print function for kpu student
+ {
+ cout<<"---------------------- Student Info --------------------"<<endl;
+ printStudent();
+ cout<<"Major: "<<major<<endl;
+ cout<<"Campus: "<<campus<<endl;
+ cout<<"Year: "<<year<<endl;
+ cout<<"-----------------------------------------------------"<<endl;
+ }
+ string getMajor()
+ {
+  return major;
+ }
+ string getCampus()
+ {
+  return campus;
+ }
+ int getYear()
+ {
+  return year;
+ }
 
-Next, write a class named KpuStudent that is derived from the Student class. The KpuStudent class should have member variables to hold the following information:
+ };
+int main()
+{
+ cout << "An example student:\n";
+  KpuStudent ks("Dave", "543921", 19, "IT", "Online", 1);
+ //printing the function
+ ks.PKpuStudent();
+ cout << "Please enter the details of two students." << endl;
+  for (int i = 0; i < 2; i++){
+   KpuStudent KPUstd1;
+   string stdName, stdNumber, kpuStdMajor, kpuStdCampus;
+ int stdAge, kpuStdYear;
 
-Major (a String)
-Campus (a String)
-Year (an int)
-Write one or more constructors and the appropriate accessor and mutator functions for the class. Demonstrate the classes by writing a program that uses a KpuStudent object.
+ cout<<"Enter Your Name: ";
+ cin>>stdName; 
+ cout<<"Enter Your Student Number: ";
+ cin>>stdNumber;
+ cout<<"Enter Your Age: ";
+ cin>>stdAge;
+ cout<<"Enter Your Major: ";
+ cin>>kpuStdMajor;
+ cout<<"Enter Your Campus: ";
+ cin>>kpuStdCampus;
+ cout<<"Enter Your Year: ";
+ cin>>kpuStdYear;
+
+ //input from function
+ KPUstd1.setKpuStudent(stdName, stdNumber, stdAge, kpuStdMajor, kpuStdCampus, kpuStdYear);
+ //printing the function
+ KPUstd1.PKpuStudent();
+}
+}
 
