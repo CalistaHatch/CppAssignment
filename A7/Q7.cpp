@@ -87,7 +87,7 @@ string c, int year)
 int main()
 {
  cout << "An example student:\n";
-  KpuStudent ks("Dave", "543921", 19, "IT", "Online", 1);
+  KpuStudent ks("Dave", "543921", 20, "IT", "Online", 2);
  //printing the function
  ks.PKpuStudent();
  cout << "Please enter the details of two students." << endl;
@@ -97,19 +97,23 @@ int main()
  int stdAge, kpuStdYear;
 
  cout<<"Enter Your Name: ";
- cin>>stdName; 
+  cin>>stdName; 
+ 
  cout<<"Enter Your Student Number: ";
- cin>>stdNumber;
+  cin>>stdNumber;
+ 
  cout<<"Enter Your Age: ";
- cin>>stdAge;
+  cin>>stdAge;
+ 
  cout<<"Enter Your Major: ";
- cin>>kpuStdMajor;
+  cin>>kpuStdMajor;
+ 
  cout<<"Enter Your Campus: ";
- cin>>kpuStdCampus;
+  cin>>kpuStdCampus;
+ 
  cout<<"Enter Your Year: ";
- cin>>kpuStdYear;
+  cin>>kpuStdYear;
 
- //input from function
  KPUstd1.setKpuStudent(stdName, stdNumber, stdAge, kpuStdMajor, kpuStdCampus, kpuStdYear);
  //printing the function
  KPUstd1.PKpuStudent();
