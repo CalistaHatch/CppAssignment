@@ -1,20 +1,99 @@
-Q8. Design a Studentclass that has the following members:
+//Q8. Design a Studentclass that has the following members:
 
-A member variable for the name of the student (a string)
-A member variable for the year that the student was enrolled (a string)
-A constructor and appropriate accessors and mutators
-A virtual print function that displays the student's name and the year he/she was enrolled.
-Design a KpuStudent class that is derived from the Student class. The KpuStudent class should have the following members:
+#include<iostream>
+#include<string.h> 
 
-A member variable for the campus location (a string, could be "Surrey", "Richmond" or "Langley")
-A constructor and appropriate accessors and mutators
-A print function that overrides the print function in the base class. The KpuStudent class’s print function should display only the student's name and his/her campus location.
-Design a HogwartsStudent class that is derived from the Student class. The HogwartsStudent class should have the following members:
+using namespace std;
 
-A member variable for the house affiliation of the student (a string, could be "Hufflepuff", "Ravenclaw", "Gryffindor" or "Slytherin").
-A constructor and appropriate accessors and mutators.
-A print function that overrides the print function in the base class. The HogwartsStudent class’s print function should display only the student’s name and the student's house 
-affiliation.
-Demonstrate the classes in a program that has an array of Student pointers. The array elements should be initialized with the addresses of dynamically allocated Student , 
-KpuStudent , and HogwartsStudent objects. (See Program 15-14 on Page with Page No. 937 of the uploading reading task , lines 17 through 22, for an example of how to do this.)
-The program should then step through the array, calling each object’s print function.
+
+class Student {  // defining a base student class
+  private:
+    string name;
+    string e_year; //enrollment year is private member
+  public:
+  
+   inline Student(){   // constructor use for assigning values to class members
+        setname(name);
+    }
+    
+    void setname (string n){ // mutator for assigning value to private member
+        name = "Bob";
+        e_year = "2020";
+    }
+    
+    string getname () // accessor for acessing private member of class
+    {
+        return name;
+    }
+    
+    string get_e_year(){
+        return e_year;
+    }
+    
+    virtual void print_f(){ // function for printing data memeber'values
+        cout<<" student name is "<<Student::getname()<<endl;
+        cout<<" student enrollment year is "<<Student::get_e_year()<<endl;
+    }
+    
+};
+
+
+class KpuStudent : public Student //derived class from student
+{ // a derived class from Student base class is construct for adding more variables
+  private:
+    string campus;
+  public:
+    
+    KpuStudent() 
+     {
+         setcampus(campus);
+     }
+     
+     void setcampus (string camp){  //mutator 
+         campus = "Surrey";
+     }
+     
+     string getcampus (){ //acessor
+         return campus;
+     }
+     
+     virtual void print_f(){ //overridden print_f function
+         cout<<" student name is "<< Student::getname()<<endl;
+         cout<<"student campus is in "<<KpuStudent::getcampus()<<endl;
+     }
+};
+
+class HogwartsStudent: public Student{  //another derived class
+    private:
+        string house_aff;
+    public:
+       HogwartsStudent(){
+           sethouse(house_aff);
+       }
+       
+      void sethouse(string house){
+          house_aff ="Slytherin";
+      }
+      
+      string gethouse_aff(){
+          return house_aff;
+      }
+      
+      virtual void print_f(){
+          cout<<"Student name is "<< Student::getname()<<endl;
+          cout<<" Student house affilation is "<< HogwartsStudent::gethouse_aff()<<endl;
+      }
+};
+
+int main() // main function
+{
+   Student info; //object for acessing variables of classes but first base class constructor will be called
+   Student *p1 = new Student();
+   Student *p2 = new KpuStudent(); //pointer initializer
+   Student *p3 = new HogwartsStudent();
+   Student *array[3] = {p1,p2,p3}; //array of pointers
+   for(int i = 0; i<3; i++){ 
+       array[i]-> print_f();
+   }
+   return 0;
+}
