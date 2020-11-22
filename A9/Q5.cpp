@@ -1,32 +1,57 @@
-Q5. Fill the blanks to complete the program
-
-// This program demonstrates a unique_ptr pointing to a dynamically allocated array of integers.
-
-#include <iostream>
-#include <memory>
+//Q5
+#include<iostream>
+#include<memory>
 using namespace std;
 
-int main()
- {
-  int max; // Max size of the array
+class StockPrices {
+    private:
+        int *a;
+        int size;
+    public:
+        StockPrices(int arr[], int n){
+            size = n;
+            a = new(nothrow) int[size];
+            for(int i=0; i<size; i++){
+                a[i] = arr[i];
+            }
+        }
+        double avg(){
+            bool flag = true;
+            double sum = 0;
+            for(int i=0; i<size; i++){
+                try {
+                    if(a[i]<0 || a[i]>5000){
+                        flag = false;
+                        throw a[i];
+                    } 
+                    else sum += a[i];    
+                }
+                catch (int x){
+                     cout << "Invaid number in array.\n";   
+                }
+            }
+            return sum/size;
+        }
+};
 
-  // Ask the user to enter an integer, and store the integer to the variable  int
 
-  *Code goes here*
-  
-  // Define a unique_ptr smart pointer, pointing to a dynamically allocated array of ints. The length of the array is equal to the value of max. 
-
-  *Code goes here*
-
- // Ask the user to enter intergers for each value of the int array. 
-
-  *Code goes here*
-
-
-// Display all the values in the array.
-
-  *Code goes here*
-
- return 0;
- }
-
+int main() {
+    int max;
+     cout << "Enter size of array: " << endl;
+     cin >> max;
+    
+    int *ptr = new(nothrow) int[max];
+    
+    for(int i=0; i<max; i++) {
+        cout << "Enter value: "; 
+        cin >> ptr[i];
+    }
+     cout << "Input array: " << endl;
+      for(int i=0; i<max; i++) cout << ptr[i] << " ";
+     cout << endl;
+    
+    StockPrices s(ptr, max);
+    cout << s.avg();
+    
+    return 0;
+}
