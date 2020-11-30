@@ -42,7 +42,26 @@ Declare constructor with arguments.
 
 Should understand concept clearly before writing code.
 ```
-bug-free code or code snippet goes here
+int main() {
+    int max;
+    cout << "Enter size of array: " << endl;
+    cin >> max;
+    
+    int *ptr = new(nothrow) int[max];
+    
+    for(int i=0; i<max; i++) {
+        cout << "Enter value: "; 
+        cin >> ptr[i];
+    }
+    cout << "Input array: " << endl;
+    for(int i=0; i<max; i++) cout << ptr[i] << " ";
+    cout << endl;
+    
+    StockPrices s(ptr, max);
+    cout << s.avg();
+    
+    return 0;
+}
 
 ```
 
