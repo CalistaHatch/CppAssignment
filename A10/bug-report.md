@@ -2,41 +2,26 @@
 
 1. **The incorrect original code or code snippit that you wrote:**
 
-``` cpp
-//code with bugs or code snippet with bug goes here
-
-//sample code
-
-// Online C++ compiler to run C++ online.
-// Write C++ code in this online editor and run it.
-
-#include <iostream>
-
-int main() {
-    std:cout << "Hello World!";
-  
-  return 0;
-}
-
+``` 
+finish.close;
 ```
 
 2. **What bug does the original code have?**
-
+I didn't put the ()
   
 
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
-
+I thought it did not require it.
 4. **How to correct the bug?**
-
+Just need to add ()
 5. **The corresponding bug-free code or code snippet is:**
 
 ```
-bug-free code or code snippet goes here
-
+finish.close();
 ```
 
 6. **What is the take-away message from this bug?**
-
+Make sure to double check my syntax
 ---
 
 # Bug 2
@@ -44,27 +29,31 @@ bug-free code or code snippet goes here
 1. **The incorrect original code or code snippit that you wrote:**
 
 ```
-code with bugs or code snippet with bug goes here
+/*make a object*/
+ifstream finish:
 
 ```
 
 2. **What bug does the original code have?**
 
-  
+  The bug is using : instead of ;
+
+
 
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
-
+It was a typo
 4. **How to correct the bug?**
-
+I just need to use ;
 5. **The corresponding bug-free code or code snippet is:**
 
 ```
-bug-free code or code snippet goes here
+/*make a object*/
+ifstream finish;
 
 ```
 
 6. **What is the take-away message from this bug?**
-
+Make sure to double check my syntax
 ---
 
 # Bug 3
@@ -72,24 +61,28 @@ bug-free code or code snippet goes here
 1. **The incorrect original code or code snippit that you wrote:**
 
 ```
-code with bugs or code snippet with bug goes here
-
+finish.open(file);
+while(finish & n>0)
 ```
 
 2. **What bug does the original code have?**
-
+I used & instead of &&
   
 
 3. **What misunderstanding of C++ concepts lead you to this incorrect code?**
+I thought that one & would be enough.
+
 
 4. **How to correct the bug?**
-
+I have to use &&
 5. **The corresponding bug-free code or code snippet is:**
 
 ```
-bug-free code or code snippet goes here
+finish.open(file);
+while(finish && n>0)
 
 ```
 
 6. **What is the take-away message from this bug?**
 
+Always revisit notes to understand the concepts.
