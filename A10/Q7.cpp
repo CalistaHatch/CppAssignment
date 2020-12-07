@@ -4,27 +4,27 @@
 using namespace std;
 
 int main()
-{
-/*make a object*/
-ifstream finish;
-/*declare the variable*/
-string line,file;
+ {
+  /*make a object*/
+ ifstream finish;
+  /*declare the variable*/
+ string line,file;
 int n;
-/*take input from user*/
+  /*take input from user*/
 cout<<"Enter file name:";
-cin>>file;
+ cin>>file;
 cout<<"Enter the number of line:";
-cin>>n;
+ cin>>n;
 /*open a file*/
-finish.open(file);
-while(finish && n>0)
-{
-// Read a Line from file
-getline(finish, line);
-// Write line in Console
-cout << line << endl;
-n--;
-}
+ finish.open(file);
+  while(finish && n>0)
+  {
+  // Read a Line from file
+    getline(finish, line);
+    // Write line in Console
+     cout << line << endl;
+       n--;
+   }
 finish.close();
 
 if(n!=0)
