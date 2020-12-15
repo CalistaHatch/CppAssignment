@@ -22,7 +22,7 @@ class Student {  // defining a base student class
     }
     
     void setname (string n){ // mutator for assigning value to private member
-        name = "Rajwinder";
+         name = "Bob";
         e_year = "2020";
     }
     
@@ -104,7 +104,7 @@ class Student {  // defining a base student class
     }
     
     void setname (string n){ // mutator for assigning value to private member
-        name = "Rajwinder";
+        name = "Bob";
         e_year = "2020";
     }
     
