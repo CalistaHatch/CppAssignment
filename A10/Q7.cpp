@@ -6,18 +6,18 @@ using namespace std;
 int main()
  {
   /*make a object*/
- ifstream finish;
+  ifstream finish;
   /*declare the variable*/
- string line,file;
+  string line,file;
 int n;
   /*take input from user*/
-cout<<"Enter file name:";
- cin>>file;
-cout<<"Enter the number of line:";
- cin>>n;
+  cout<<"Enter file name:";
+   cin>>file;
+  cout<<"Enter the number of line:";
+   cin>>n;
 /*open a file*/
  finish.open(file);
-  while(finish && n>0)
+  while(finish && n>0) 
   {
   // Read a Line from file
     getline(finish, line);
